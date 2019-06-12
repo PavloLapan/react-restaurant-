@@ -10,11 +10,15 @@ import Header from "../header";
 import Reservation from "../reservation";
 
 
-
+import '../../style/style.css';
+import '../../style/media.css';
+import Footer from "../footer";
 export default class App extends Component {
     render() {
         return (
             <div>
+                <Footer/>
+
 
                 <Router>
                     <Switch>
