@@ -1,0 +1,86 @@
+@media all and (max-width: 480px) {
+  .p-4 {
+    padding: 0; }
+
+  .w-25 {
+    width: 100%; }
+
+  .ui-datepicker-trigger {
+    margin: 0 0 0 5px;
+    vertical-align: text-top;
+    width: 13px;
+    position: absolute;
+    top: 47px; }
+
+  header .container-fluid-header .menu-fixed {
+    display: none; }
+  header .container-fluid-header .outer-menu {
+    display: block; }
+  header .container-fluid-header .content h1 {
+    font-size: 36px; }
+
+  .about .media {
+    flex-direction: column; }
+    .about .media .col-4 img {
+      width: 100%; }
+    .about .media .col-4 .images img {
+      width: 50%; }
+    .about .media .col-6 img {
+      width: 100%; }
+
+  .carousel-wrapper .carousel-item {
+    padding: 0; }
+    .carousel-wrapper .carousel-item .arrow-next {
+      right: -10px !important; }
+    .carousel-wrapper .carousel-item .arrow-prev {
+      left: -10px !important; }
+
+  .actions .container .row p {
+    padding: 0 10px; }
+
+  .booking .jumborton {
+    border: 10px solid #999;
+    width: auto;
+    padding: 25px; }
+    .booking .jumborton i {
+      top: 46px !important; }
+    .booking .jumborton .row {
+      flex-direction: column; }
+      .booking .jumborton .row label {
+        margin-top: 15px; }
+
+  .features {
+    height: auto; }
+    .features .container .justify {
+      flex-direction: column; }
+      .features .container .justify .col-4 {
+        max-height: 275px; }
+
+  .our-menu .list {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 0; }
+  .our-menu .d-flex {
+    flex-direction: column; }
+    .our-menu .d-flex img {
+      padding: 0 4rem; }
+    .our-menu .d-flex .col-6 {
+      width: 100%;
+      padding: 0; }
+      .our-menu .d-flex .col-6 .dishes {
+        border-top: 1px solid #999; }
+  .our-menu .jumborton form input {
+    width: 200px !important; }
+
+  footer .container {
+    padding: 10px; }
+    footer .container .row {
+      flex-direction: column; }
+      footer .container .row .w-25 {
+        width: 100%; }
+        footer .container .row .w-25 .row {
+          flex-direction: row; }
+          footer .container .row .w-25 .row .column img {
+            max-width: 100px; } }
+
+/*# sourceMappingURL=media.css.map */
