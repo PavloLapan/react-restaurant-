@@ -22,12 +22,12 @@ export default class Menu extends React.Component{
                         </p>
                     </div>
                     <div className="row list">
-                        <a href="">ALL</a>
-                        <a href="">STARTERS</a>
-                        <a href="">BREAKFAST</a>
-                        <a href="">LUNCH</a>
-                        <a href="">DINNER</a>
-                        <a href="">DESSERTS</a>
+                        <a >ALL</a>
+                        <a >STARTERS</a>
+                        <a >BREAKFAST</a>
+                        <a >LUNCH</a>
+                        <a >DINNER</a>
+                        <a >DESSERTS</a>
                     </div>
                     <div className="d-flex">
                         <div className="col-6">

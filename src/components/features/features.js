@@ -1,45 +1,59 @@
 import React from 'react';
-import thumb7 from '../../img/thumb7.png'
-import thumb6 from '../../img/thumb6.png'
-import thumb5 from '../../img/thumb5.png'
+import {connect} from 'react-redux';
+import {fetchData} from '../../actions'
 
-export default class Features extends React.Component{
-    render() {
-        return (
-            <section className="features">
-                <div className="container">
-                    <div className="row text-center column">
-                        <h2 className="white">
-                            OUR FEATURES
-                        </h2>
-                        <p className="yellow-line">
-                            Little things make us best in town</p>
-                    </div>
-                    <div className="row justify">
-                        <div className="col-4 w-25 feature-box">
-                            <img src={thumb5} alt=""/>
-                                <h1 className="yellow-line">SERVING WITH LOVE</h1>
-                                <p>Aenean suscipit vehicula purus quis iaculis. Aliquam nec leo nisi. Nam urna arcu,
-                                    maximus eget ex nec, consequat pellentesque enim. Aliquam tempor fringilla odio, vel
-                                    ullamcorper turpis varius eu.</p>
-                        </div>
-                        <div className="col-4 w-25 feature-box">
-                            <img src={thumb6} alt=""/>
-                                <h1 className="yellow-line">SERVING WITH LOVE</h1>
-                                <p>Aenean suscipit vehicula purus quis iaculis. Aliquam nec leo nisi. Nam urna arcu,
-                                    maximus eget ex nec, consequat pellentesque enim. Aliquam tempor fringilla odio, vel
-                                    ullamcorper turpis varius eu.</p>
-                        </div>
-                        <div className="col-4 w-25 feature-box">
-                            <img src={thumb7} alt=""/>
-                                <h1 className="yellow-line">SERVING WITH LOVE</h1>
-                                <p>Aenean suscipit vehicula purus quis iaculis. Aliquam nec leo nisi. Nam urna arcu,
-                                    maximus eget ex nec, consequat pellentesque enim. Aliquam tempor fringilla odio, vel
-                                    ullamcorper turpis varius eu.</p>
-                        </div>
-                    </div>
+import Feature from "./feature";
+import Spinner from "../spinner/spinner";
+import ErrorIndicator from "../error-indicator/error-indicator";
+import withServiceContext from "../hoc/withServiceContext";
+
+ const Features= (state) =>{
+     const {data} = state;
+    return (
+        <section className="features">
+            <div className="container">
+                <div className="row text-center column">
+                    <h2 className="white">OUR FEATURES</h2>
+                    <p className="yellow-line">Little things make us best in town</p>
                 </div>
-            </section>
-        );
+                <div className="row justify">
+                    {
+                        data.map((data)=>{
+                            return(
+                                <React.Fragment key={data.id}> <Feature data={data}/></React.Fragment>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+        </section>
+    );
+};
+
+class FeaturesContainer extends React.Component {
+    componentDidMount() {
+        this.props.fetchData()
+    };
+
+    render() {
+        const {data, loading, error} = this.props;
+        if (loading) {
+            return <Spinner/>
+        }
+        if (error) {
+            return <ErrorIndicator/>
+        }
+        return <Features data={data} />
     }
 }
+const mapStateToProps = ({DataList: {data, loading, error}}) => {
+    return {data, loading, error}
+};
+
+const mapDispatchToProps = (dispatch, {Service}) => {
+    return {
+        fetchData: fetchData(Service, dispatch)
+    }
+};
+export default withServiceContext()(
+    connect(mapStateToProps, mapDispatchToProps)(FeaturesContainer));
