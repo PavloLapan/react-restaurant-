@@ -10,7 +10,7 @@ import withServiceContext from "../hoc/withServiceContext";
  const Features= (state) =>{
      const {data} = state;
     return (
-        <section className="features">
+        <section className="features ">
             <div className="container">
                 <div className="row text-center column">
                     <h2 className="white">OUR FEATURES</h2>

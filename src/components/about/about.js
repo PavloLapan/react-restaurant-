@@ -11,7 +11,7 @@ import '../../style/carousel.css'
  const About = () => { 
     return(
 <div>
-    <section className="about">
+    <section className="about" id = "about">
         <div className="row column text-center">
             <h2>
                 THE RESTAURANT
