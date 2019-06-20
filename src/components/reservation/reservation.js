@@ -15,7 +15,7 @@ export default class Reservation extends React.Component {
 
     render() {
         return (
-            <section className="booking">
+            <section className="booking ">
                 <div className="container">
                     <div className="row text-center column">
                         <h2 className="gray">

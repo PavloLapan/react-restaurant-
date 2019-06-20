@@ -11,7 +11,7 @@ export default class Menu extends React.Component{
 
     render() {
         return (
-            <section className="our-menu">
+            <section className="our-menu ">
                 <div className="container p-4">
                     <div className="row text-center column">
                         <h2 className="gray">
@@ -98,7 +98,7 @@ export default class Menu extends React.Component{
                                         <img src={zomato} alt=""/>
                         </div>
                     </div>
-                    <div className="row column jumborton text-center">
+                    <div className="row column jumborton text-center subscribe">
                         <h2 className="gray">
                             INSTAGRAM
                         </h2>
