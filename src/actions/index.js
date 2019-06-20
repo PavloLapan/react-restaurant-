@@ -4,7 +4,7 @@ const Requested=()=>{
     }
 };
 
-const dataLoaded = (newData) =>{
+export const dataLoaded = (newData) =>{
     return{
         type: 'FETCH_DATA_SUCCESS',
         payload: newData
@@ -17,14 +17,9 @@ const dataError = (error) =>{
     }
 };
 
-const fetchData = (serviceContext, dispatch ) => () => {
+export const fetchData = (serviceContext, dispatch ) => () => {
     dispatch(Requested());
     serviceContext.getData()
         .then((data) => dispatch(dataLoaded(data)))
         .catch((err) => dispatch(dataError(err)));
 };
-
-export {
-    fetchData,
-    dataLoaded
-}

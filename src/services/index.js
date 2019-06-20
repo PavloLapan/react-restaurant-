@@ -20,6 +20,40 @@ export default class FaturesData extends Component {
             name: "CLIENTS LOVES OUR atmosphere",
             src: 'https://demo.web3canvas.com/themeforest/tomato/img/thumb5.png',
             desc: "5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner."
+
+        },
+        {
+            id: "4",
+            name: "SERVING WITH LOVE",
+            src: 'https://demo.web3canvas.com/themeforest/tomato/img/thumb7.png',
+            desc: "Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long."
+        },
+        {
+            id: "5",
+            name: "SERVING WITH LOVE",
+            src: 'https://demo.web3canvas.com/themeforest/tomato/img/thumb7.png',
+            desc: "Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long."
+        }
+        ,
+        {
+            id: "6",
+            name: "SERVING WITH LOVE",
+            src: 'https://demo.web3canvas.com/themeforest/tomato/img/thumb7.png',
+            desc: "Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long."
+        }
+        ,
+        {
+            id: "7",
+            name: "SERVING WITH LOVE",
+            src: 'https://demo.web3canvas.com/themeforest/tomato/img/thumb7.png',
+            desc: "Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long."
+        }
+        ,
+        {
+            id: "8",
+            name: "SERVING WITH LOVE",
+            src: 'https://demo.web3canvas.com/themeforest/tomato/img/thumb7.png',
+            desc: "Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long."
         }
     ];
 
@@ -32,7 +66,7 @@ export default class FaturesData extends Component {
                 else {
                     reject(new Error(''))
                 }
-            }, 700)
+            }, 1000)
         })
     }
 };

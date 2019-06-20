@@ -31,3 +31,4 @@ yarn-error.log*
 .idea/workspace.xml
 package-lock.json
 package-lock.json
+.idea/inspectionProfiles/Project_Default.xml

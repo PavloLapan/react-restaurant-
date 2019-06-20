@@ -6,6 +6,10 @@ import arrowdown from '../../img/arrow-down.png'
 
 
 const Header = () => {
+    const toggleBottom = () =>{
+        window.scroll({top: 800, left: 0, behavior: 'smooth' })
+    };
+
     return(
         <header>
             <div className="container-fluid-header">
@@ -43,12 +47,12 @@ const Header = () => {
                         <Link to=''>Get subscribed <i className="fa fa-star" aria-hidden="true"></i></Link>
                     </div>
                 </div>
-                <div className="content">
+                <div className="content" id='content'>
                     <img src={logo} alt=""/>
                         <h1>DELICIOUS FOOD</h1>
                         <p>Tomato is a delitious restaurant website template</p>
                         <div className="arrow">
-                            <img className="button" src={arrowdown} alt=""/>
+                            <img className="button" src={arrowdown} alt="" onClick={toggleBottom}/>
                         </div>
                 </div>
             </div>
