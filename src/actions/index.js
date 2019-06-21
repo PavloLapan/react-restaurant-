@@ -1,6 +1,3 @@
-import Service from '../components/hoc/withServiceContext';
-import dispatch from '../components/hoc/withServiceContext';
-
 const Requested=()=>{
     return{
         type: 'FETCH_DATA_REQUEST'
@@ -40,6 +37,7 @@ const dataError = (error) =>{
 };
 
 
+
   const showFilteredMenu = (category)=>
   {
       return{
@@ -64,7 +62,7 @@ const menuError = (error) =>{
 };
 
 
-export const fetchData = (serviceContext, dispatch ) => () => {
+const fetchData = (serviceContext, dispatch ) => () => {
     dispatch(Requested());
     serviceContext.getData()
         .then((data) => dispatch(dataLoaded(data)))
@@ -79,30 +77,28 @@ export const fetchData = (serviceContext, dispatch ) => () => {
 };
 
 
-var initialMenuData=fetchMenuData(Service, dispatch);
- 
+// var initialMenuData=fetchMenuData(Service, dispatch);
+//
+//
+// const filterMenuData = (selectedCategory) =>
+// {
+// var filteredMenuData = initialMenuData.reduce((filteredMenuData,item)=>
+// {
+//     if (item.category===selectedCategory)
+//     {
+//         filteredMenuData.push(item);
+//     }
+//     return filteredMenuData;
+// },[]);
+//     return filteredMenuData;
+// };
 
-const filterMenuData = (selectedCategory) =>
-{
-var filteredMenuData = initialMenuData.reduce((filteredMenuData,item)=>
-{
-    if (item.category===selectedCategory)
-    {
-        filteredMenuData.push(item);
-    }
-    return filteredMenuData;
-},[]);
-    return filteredMenuData;
-};
+
 
 
 
 export {
     fetchData,
-    dataLoaded,
-    fetchMenuData,
-    showFilteredMenu,
-    filterMenuData,
-    //initialMenuData
-}
 
+    fetchMenuData
+}

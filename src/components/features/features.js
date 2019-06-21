@@ -9,9 +9,32 @@ import Coverflow from 'react-coverflow';
 import {StyleRoot} from 'radium';
 
 
+ const Features= (state) =>{
+     const {data} = state;
+    return (
+        <section className="features">
+            <div className="container">
+                <div className="row text-center column">
+                    <h2 className="white">OUR FEATURES</h2>
+                    <p className="yellow-line">Little things make us best in town</p>
+                </div>
+                <div className="row justify">
+                    {
+                        data.map((data)=>{
+                            return(
+                                <React.Fragment key={data.id}> <Feature data={data}/></React.Fragment>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+        </section>
+    );
+};
+
 class FeaturesContainer extends React.Component {
     componentDidMount() {
-        this.props.fetchData();
+        this.props.fetchData()
     };
 
     render() {
@@ -60,16 +83,14 @@ class FeaturesContainer extends React.Component {
         )
     }
 }
-
 const mapStateToProps = ({DataList: {data, loading, error}}) => {
     return {data, loading, error}
 };
 
 const mapDispatchToProps = (dispatch, {Service}) => {
     return {
-        fetchData: () => fetchData(Service, dispatch)
+        fetchData: fetchData(Service, dispatch)
     }
 };
-
 export default withServiceContext()(
     connect(mapStateToProps, mapDispatchToProps)(FeaturesContainer));

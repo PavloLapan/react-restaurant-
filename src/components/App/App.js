@@ -42,8 +42,8 @@ class App extends Component {
                         <Reservation/>
                             <ServiceProvider value={featuresData}>
                                 <Features/>
-                                <Menu/>
-                        </ServiceProvider>
+                            </ServiceProvider>
+                        <Menu/>
                         <Footer/>
 
                     </ErrorBoundry>
