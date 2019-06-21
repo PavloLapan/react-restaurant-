@@ -7,8 +7,7 @@ import Spinner from "../spinner/spinner";
 import ErrorIndicator from "../error-indicator/error-indicator";
 import withServiceContext from "../hoc/withServiceContext";
 
- const Features= (state) =>{
-     const {data} = state;
+ const Features= ({data}) =>{
     return (
         <section className="features">
             <div className="container">
@@ -32,7 +31,7 @@ import withServiceContext from "../hoc/withServiceContext";
 
 class FeaturesContainer extends React.Component {
     componentDidMount() {
-        this.props.fetchData()
+        this.props.fetchData();
     };
 
     render() {
@@ -46,14 +45,16 @@ class FeaturesContainer extends React.Component {
         return <Features data={data} />
     }
 }
+
 const mapStateToProps = ({DataList: {data, loading, error}}) => {
     return {data, loading, error}
 };
 
 const mapDispatchToProps = (dispatch, {Service}) => {
     return {
-        fetchData: fetchData(Service, dispatch)
+        fetchData: () => fetchData(Service, dispatch)
     }
 };
+
 export default withServiceContext()(
     connect(mapStateToProps, mapDispatchToProps)(FeaturesContainer));
