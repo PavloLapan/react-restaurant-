@@ -5,9 +5,10 @@ import AdminFooter from "./admin-footer";
 
 export default class AdminPage extends React.Component{
     render() {
+        const orders = 'orders';
         return (
             <div>
-                <AdminHeader/>
+                <AdminHeader name={orders}/>
                 <AdminTab/>
                 <AdminFooter/>
             </div>
