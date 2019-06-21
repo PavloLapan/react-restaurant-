@@ -1,9 +1,15 @@
 .d-flex {
   display: flex; }
-
 .row {
   display: flex;
   flex-direction: row; }
+
+.transparent{
+  background: rgba(199,199,199,0.5);
+}
+.font-blue{
+  color: #45b5f5;
+}
 
 .column {
   display: flex;
@@ -142,7 +148,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       width: 30px;
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
-      border-radius: 0; }
+      border-radius: 0;
+      position: relative;
+      transition: 1s all;
+    }
+  .container-fluid-header .content .arrow img:hover{
+    transform: translateY(10px)
+  }
 
 .about .row h2 {
   margin-top: 50px;
@@ -376,6 +388,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         line-height: 42px;
         height: 46px;
         font-family: josefin sans, sans-serif; }
+        #coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v.coverflow__left__PhMc6 {
+          position: absolute;
+          left: 80px!important;
+        }
+        #coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v.coverflow__right__1tzAF {
+          position: absolute;
+          right: 80px!important;
+        }
 
 footer {
   font-family: Josefin Sans, serif;

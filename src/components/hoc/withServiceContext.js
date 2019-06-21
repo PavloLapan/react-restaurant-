@@ -13,5 +13,4 @@ const withServiceContext = () => (Wrapped) => {
             </ServiceConsumer>)
     }
 };
-
 export default withServiceContext;

@@ -5,6 +5,8 @@ import About from '../about';
 import '../../style/normalize.css'
 import '../../style/media.css'
 import '../../style/style.css'
+import '../../style/burger-menu.css'
+import '../../style/datepicker.css'
 
 import Header from "../header";
 import Reservation from "../reservation";
