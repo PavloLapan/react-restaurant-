@@ -1,14 +1,22 @@
 import { initialMenuData } from '../actions';
-import {filterMenuData} from '../actions';
-
+import { filterMenuData } from '../actions';
+filterMenuData = function(menuData, selectedCategory) {
+    if (selectedCategory === "ALL") {
+        return menuData;
+    }
+    return menuData.filter(item => item.category === selectedCategory);
+}
 const UpdateDataList = (state, action) => {
 
-    if(state === undefined){
+    if (state === undefined) {
         return {
             data: [],
             dataMenu: [],
             loading: true,
-            error: false
+            error: false,
+            filteredDataMenu: [],
+            menuFilter: "ALL",
+
         }
     }
 
@@ -22,12 +30,12 @@ const UpdateDataList = (state, action) => {
             };
 
         case 'FETCH_DATA_REQUEST':
-                return {
-                    ...state,
-                    data: [],
-                    loading: true,
-                    error: null
-                };
+            return {
+                ...state,
+                data: [],
+                loading: true,
+                error: null
+            };
 
 
         case 'FETCH_DATA_FAILURE':
@@ -45,22 +53,21 @@ const UpdateDataList = (state, action) => {
                 error: action.payload
             };
 
-  /*      case 'FETCH_MENU_SUCCESS':
-                return {
-                    ...state,
-                    dataMenu: initialMenuData.map( ),
-                    menuFilter: action.payload.filter
-                    //filter?????
-            }; */
-
-            case 'SHOW_FILTERED_MENU':
-                return {
-                    ...state,
-                    menuFilter: action.payload,
-                    dataMenu: filterMenuData(action.payload)
+        case 'FETCH_MENU_SUCCESS':
+            return {
+                ...state,
+                dataMenu: action.payload,
+                filteredDataMenu: action.payload
             };
-        
-        default :
+
+        case 'SHOW_FILTERED_MENU':
+            return {
+                ...state,
+                menuFilter: action.payload,
+                filteredDataMenu: filterMenuData(state.dataMenu, action.payload)
+            };
+
+        default:
             return state.DataList;
 
     }
@@ -68,7 +75,7 @@ const UpdateDataList = (state, action) => {
 
 const UpdateShoppingCart = (state, action) => {
 
-    if(state === undefined){
+    if (state === undefined) {
         return {
             cartItems: [],
             orderTotal: 0
@@ -80,7 +87,7 @@ const UpdateShoppingCart = (state, action) => {
             return UpdateOrder(state, action.payload, 1);
 
         case 'FOOD_REMOVE':
-            const item = state.shippingCart.cartItems.find(({id}) => id === action.payload);
+            const item = state.shippingCart.cartItems.find(({ id }) => id === action.payload);
             return UpdateOrder(state, action.payload, -item.count);
 
         case 'FOOD_DECREASE':
@@ -117,7 +124,7 @@ const UpdateCartItems = (cartItems, item, idx) => {
 
 const updateItem = (food, item = {}, quantity) => {
 
-    const {id = food.id, title = food.title, total = 0, count = 0,} = item;
+    const { id = food.id, title = food.title, total = 0, count = 0, } = item;
 
     return {
         id,
@@ -129,11 +136,11 @@ const updateItem = (food, item = {}, quantity) => {
 
 const UpdateOrder = (state, foodId, quantity) => {
     console.log(state);
-    const {foodList: {foood}, shippingCart: {cartItems}} = state;
+    const { foodList: { foood }, shippingCart: { cartItems } } = state;
 
     const food = foood.find((food) => food.id === foodId);
 
-    const stateIndex = cartItems.findIndex(({id}) => id === food.id);
+    const stateIndex = cartItems.findIndex(({ id }) => id === food.id);
     const item = cartItems[stateIndex];
 
     const newItem = updateItem(food, item, quantity);
