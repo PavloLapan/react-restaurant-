@@ -8,6 +8,7 @@ import withServiceContext from "../hoc/withServiceContext";
 import Coverflow from 'react-coverflow';
 import {StyleRoot} from 'radium';
 
+
 class FeaturesContainer extends React.Component {
     componentDidMount() {
         this.props.fetchData();
@@ -66,8 +67,9 @@ const mapStateToProps = ({DataList: {data, loading, error}}) => {
 
 const mapDispatchToProps = (dispatch, {Service}) => {
     return {
-        fetchData: fetchData(Service, dispatch)
+        fetchData: () => fetchData(Service, dispatch)
     }
 };
+
 export default withServiceContext()(
     connect(mapStateToProps, mapDispatchToProps)(FeaturesContainer));

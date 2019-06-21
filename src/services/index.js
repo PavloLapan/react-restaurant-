@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import MenuData from '../components/menu/menuData.json'
 
 export default class FaturesData extends Component {
 
@@ -67,6 +68,19 @@ export default class FaturesData extends Component {
                     reject(new Error(''))
                 }
             }, 1000)
+        })
+    }
+
+    getMenuData() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (Math.random() > 0.25) {
+                    resolve(MenuData)
+                }
+                else {
+                    reject(new Error(''))
+                }
+            }, 700)
         })
     }
 };
