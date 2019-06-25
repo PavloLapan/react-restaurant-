@@ -9,8 +9,6 @@ import Coverflow from 'react-coverflow';
 import {StyleRoot} from 'radium';
 
 
-
-
 class FeaturesContainer extends React.Component {
     componentDidMount() {
         this.props.fetchData()

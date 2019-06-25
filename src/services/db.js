@@ -1,0 +1,94 @@
+const dataMenu = [
+  {
+    "name": "Double Burger",
+    "price": 40,
+    "description": "Two grilled patties, American cheese, lettuce, tomato & mustard. Served with fries.",
+    "category": "LUNCH"
+  },
+  {
+    "name": "Boneless Wings",
+    "price": 45,
+    "description": "Hand-tossed in your choice of sauce: House BBQ, Honey-Chipotle, or Buffalo. Served with fries.",
+    "category": "LUNCH"
+  },
+  {
+    "name": "California Turkey Club",
+    "price": 55,
+    "description": "Half sandwich with turkey, bacon, avocado, swiss, tomatoes, lettuce & onions on wheat Texas toast. Served with fries.",
+    "category": "LUNCH"
+  },
+  {
+    "name": "Molten Chocolate Cake",
+    "price": 140,
+    "description": "Chocolate cake with a molten chocolate center, topped with vanilla ice cream in a chocolate shell. Big enough to share, too good to actually do it.",
+    "category": "DESSERTS"
+  },
+  {
+    "name": "Skillet Chocolate Chip Cookie",
+    "price": 100,
+    "description": "Topped with vanilla ice cream, hot fudge.",
+    "category": "DESSERTS"
+  },
+  {
+    "name": "Cheesecake",
+    "price": 110,
+    "description": "Served over strawberry puree.",
+    "category": "DESSERTS"
+  },
+  {
+    "name": "Cup of the Original Chili",
+    "price": 100,
+    "description": "Yeah, chili is our thing. Our original recipe, filled with beef, onions & signature blend of spices. Topped with shredded cheese & tortilla strips.",
+    "category": "DINNER"
+  },
+  {
+    "name": "Chicken Fajitas",
+    "price": 80,
+    "description": "With chipotle butter, cilantro, bell peppers, onions. Served with Mexican rice, black beans & flour tortillas. Subsititute flour with all-natural corn tortillas (minus 140 cal).",
+    "category": "DINNER"
+  },
+  {
+    "name": "Ancho Salmon",
+    "price": 100,
+    "description": "Seared chile-rubbed Atlantic salmon, spicy citrus-chile sauce, cilantro, queso fresco. Served with Mexican rice & steamed broccoli.",
+    "category": "DINNER"
+  },
+  {
+    "name": "Grilled Chicken Salad",
+    "price": 70,
+    "description": "Tomatoes, corn & black bean salsa, shredded cheese with honey-lime vinaigrette.",
+    "category": "STARTERS"
+  },
+  {
+    "name": "Bacon Avocado Grilled Chicken Sandwich",
+    "price": 57,
+    "description": "You definitely won't be hungry later. Grilled chicken, bacon, swiss, avocado, sauteed onions, lettuce, tomato, cilantro-pesto mayo on a toasted buttery roll.",
+    "category": "STARTERS"
+  },
+  {
+    "name": "California Turkey Club",
+    "price": 60,
+    "description": "Bacon, avocado, tomato, red onion, swiss, lettuce, cilantro-pesto mayo on wheat Texas toast.",
+    "category": "STARTERS"
+  },
+  {
+    "name": " Margarita Grilled Chicken",
+    "price": 120,
+    "description": "Pico, tortilla strips, Mexican rice, black beans. It only tastes like a guilty pleasure.",
+    "category": "BREAKFAST"
+  },
+  {
+    "name": " Spicy Shrimp Tacos",
+    "price": 99,
+    "description": "Three spicy chile-lime shrimp tacos in flour tortillas with pico, avocado, cilantro, coleslaw queso fresco. Served with Mexican rice & black beans.",
+    "category": "BREAKFAST"
+  },
+  {
+    "name": " Honey-Chipotle Crispers® & Waffles",
+    "price": 119,
+    "description": "Crispers on top of Belgian waffles. Topped with bacon, jalapeños, ancho-chile ranch. Served with fries & honey-chipotle sauce.",
+    "category": "BREAKFAST"
+  }
+]
+
+export default dataMenu;

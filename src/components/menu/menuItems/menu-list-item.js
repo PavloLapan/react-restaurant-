@@ -1,7 +1,6 @@
 import React from 'react'
 
-const MenuItem = () => {
-       const { name, price, description, category }  = this.props;
+const MenuItem = ({item: { name, price, description }}) => {
     return (
         <div className="column dishes">
             <div className="d-flex between">

@@ -1,5 +1,5 @@
 import React from 'react'
-import data from '../../../services/db.json'
+import dataMenu from '../../../services/db.js'
 import MenuItem from "./menu-list-item";
 import Spinner from "../../spinner/spinner";
 import ErrorIndicator from "../../error-indicator/error-indicator";
@@ -12,25 +12,15 @@ class MenuItemList extends React.Component {
         error: null
     };
 
-    fetchData() {
-        fetch(data)
-            .then(response => response.json())
-            .then(data =>
-                this.setState({
-                    dataMenu: data,
-                    isLoading: false,
-                })
-            )
-            .catch(error => this.setState({error, isLoading: false}));
-    }
-
     componentDidMount() {
-        this.fetchData();
+        this.setState({
+            dataMenu, isLoading: false
+        });
     }
 
     render() {
         const {isLoading, dataMenu, error} = this.state;
-        console.log(dataMenu)
+        console.log(dataMenu);
 
         if (isLoading) {
             return <Spinner/>
@@ -41,13 +31,12 @@ class MenuItemList extends React.Component {
         else {
             return (
                 <div className="d-flex">
-                    <div className="col-6">
+                    <div className="col-12">
                         {
-                            dataMenu.map((dataMenu) => {
-                                return <MenuItem item={dataMenu} />
+                            dataMenu.map((item, index) => {
+                                return <MenuItem key={index} item={item} />
                             })
                         }
-
                     </div>
                 </div>
             )
