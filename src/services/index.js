@@ -1,5 +1,6 @@
 import {Component} from 'react'
 
+
 export default class FaturesData extends Component {
 
     data = [
@@ -68,5 +69,5 @@ export default class FaturesData extends Component {
                 }
             }, 1000)
         })
-    }
+    };
 };

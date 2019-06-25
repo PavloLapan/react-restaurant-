@@ -29,7 +29,7 @@ export const dataLoaded = (newData) =>{
         payload: newData
     }
 };
-const dataError = (error) =>{
+export const dataError = (error) =>{
     return{
         type: 'FETCH_DATA_FAILURE',
         payload: error
@@ -38,7 +38,7 @@ const dataError = (error) =>{
 
 
 
-  const showFilteredMenu = (category)=>
+export  const showFilteredMenu = (category)=>
   {
       return{
       type: 'SHOW_FILTERED_MENU',
@@ -46,7 +46,7 @@ const dataError = (error) =>{
       }
   };
 
-    const showMenu = (menuData) => {
+export  const showMenu = (menuData) => {
     return{
       type: 'SHOW_MENU_SUCCESS',
       payload: menuData
@@ -54,7 +54,7 @@ const dataError = (error) =>{
   };
 
 
-const menuError = (error) =>{
+export  const menuError = (error) =>{
     return{
         type: 'FETCH_MENU_DATA_FAILURE',
         payload: error
@@ -62,19 +62,13 @@ const menuError = (error) =>{
 };
 
 
-const fetchData = (serviceContext, dispatch ) => () => {
+export const fetchData = (serviceContext, dispatch ) => () => {
     dispatch(Requested());
     serviceContext.getData()
         .then((data) => dispatch(dataLoaded(data)))
         .catch((err) => dispatch(dataError(err)));
 };
 
-
- const fetchMenuData = (serviceContext, dispatch ) => () => {
-    serviceContext.getMenuData()
-        .then((MenuData) => dispatch(showMenu(MenuData)))
-        .catch((err) => dispatch(menuError(err)));
-};
 
 
 // var initialMenuData=fetchMenuData(Service, dispatch);
@@ -93,12 +87,3 @@ const fetchData = (serviceContext, dispatch ) => () => {
 //     return filteredMenuData;
 // };
 
-
-
-
-
-export {
-    fetchData,
-
-    fetchMenuData
-}

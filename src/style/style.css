@@ -318,7 +318,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       cursor: pointer;
       transition: all 0.5s ease;
       border-bottom: 3px solid transparent; }
-      .our-menu .list a:hover {
+      .our-menu .list p:hover {
         color: #f7b239; }
   .our-menu .row p {
     font-size: 20px;

@@ -27,7 +27,6 @@ const featuresData = new FaturesData();
 class App extends Component {
 
     render() {
-        console.log(featuresData);
         return (
             <div>
                 <Provider store={store}>
@@ -43,7 +42,9 @@ class App extends Component {
                             <ServiceProvider value={featuresData}>
                                 <Features/>
                             </ServiceProvider>
-                        <Menu/>
+
+                                <Menu/>
+
                         <Footer/>
 
                     </ErrorBoundry>

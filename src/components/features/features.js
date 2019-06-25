@@ -9,28 +9,7 @@ import Coverflow from 'react-coverflow';
 import {StyleRoot} from 'radium';
 
 
- const Features= (state) =>{
-     const {data} = state;
-    return (
-        <section className="features">
-            <div className="container">
-                <div className="row text-center column">
-                    <h2 className="white">OUR FEATURES</h2>
-                    <p className="yellow-line">Little things make us best in town</p>
-                </div>
-                <div className="row justify">
-                    {
-                        data.map((data)=>{
-                            return(
-                                <React.Fragment key={data.id}> <Feature data={data}/></React.Fragment>
-                            )
-                        })
-                    }
-                </div>
-            </div>
-        </section>
-    );
-};
+
 
 class FeaturesContainer extends React.Component {
     componentDidMount() {
@@ -54,11 +33,12 @@ class FeaturesContainer extends React.Component {
                         <p className="yellow-line">Little things make us best in town</p>
                     </div>
                     <Coverflow
-                        autoplay={false}
+                        autoplay
                         displayQuantityOfSide={2}
                         navigation
                         infiniteScroll
                         enableHeading
+
                         media={{
                             '@media (max-width: 900px)': {
                                 width: '100%',
@@ -70,6 +50,7 @@ class FeaturesContainer extends React.Component {
                             }
                         }}
                     >
+
                         {
                             data.map((data) => {
                                 return (
