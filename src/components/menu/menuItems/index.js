@@ -1,5 +1,5 @@
 import React from 'react'
-import data from '../../../services/db.json'
+import data from '../../../../db.json'
 import MenuItem from "./menu-list-item";
 import Spinner from "../../spinner/spinner";
 import ErrorIndicator from "../../error-indicator/error-indicator";
