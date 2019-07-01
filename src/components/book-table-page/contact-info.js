@@ -1,5 +1,5 @@
 const contactInfo = {
-    name: 'Alkinoos Taverna',
+    name: 'Oxygen Taverna',
     info: {
         location: {
             street: 'Main Street',

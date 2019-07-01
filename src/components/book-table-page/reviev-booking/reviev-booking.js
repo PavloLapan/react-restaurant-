@@ -1,28 +1,25 @@
-import React, { Fragment, Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Fragment, Component} from 'react';
+import {Link} from 'react-router-dom';
 import propTypes from 'prop-types';
 import contactInfo from '../contact-info';
-import { splitDate, splitTime } from '../helpers';
+import {splitDate, splitTime} from '../helpers';
 import * as emailjs from 'emailjs-com';
 import Modal from '../modal/modal';
 import './style.css'
 
 class ReviewBooking extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            confirmed: false,
-            show: false,
-            location: {},
-            hours: {},
-        };
-    }
 
+    state = {
+        confirmed: false,
+        show: false,
+        location: {},
+        hours: {},
+    };
 
 
     render() {
         const query = new URLSearchParams(this.props.location.search);
-        const { street, number, code, city, province } = contactInfo.info.location;
+        const {street, number, code, city, province} = contactInfo.info.location;
         const reservation = {};
         for (let param of query.entries()) {
             //Transforming data from array ["queryName", "queryValue"]
@@ -53,12 +50,12 @@ class ReviewBooking extends Component {
         };
 
         const showModal = () => {
-            this.setState({ show: true });
+            this.setState({show: true});
         };
 
         return (
             <Fragment>
-                <Modal show={this.state.show} />
+                <Modal show={this.state.show}/>
                 <Link to="/">
                     <h1 className="heading review-booking__title">{contactInfo.name}</h1>
                 </Link>
