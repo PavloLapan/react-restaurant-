@@ -1,0 +1,64 @@
+.review-booking {
+    margin: 5rem 0;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #525252;
+    max-width: 600px;
+    box-shadow: 1px 1px 3px #dedede;
+    padding: 5rem 2rem;
+}
+.review-booking__title {
+    margin: 4rem 0;
+}
+.review-booking__title, .review-booking__title:hover {
+    color: #525252;
+    text-decoration: none;
+}
+.review-booking a, .review-booking a:hover, .review-booking a:visited {
+    color: #525252;
+    text-decoration: none;
+}
+.review-booking__address {
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+.review-booking__name {
+    font-style: italic;
+    font-size: 1.35rem;
+    color: #bbb;
+    margin: 1.25rem 0;
+}
+.review-booking__name span {
+    margin-right: 0.25rem;
+    color: #525252;
+}
+.review-booking__value {
+    margin: 0;
+    min-width: 100px;
+    text-align: center;
+}
+.review-booking__description {
+    min-width: 100px;
+    text-align: center;
+    color: #bbb;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    margin: 0 0 1rem 0;
+    padding: 0 0 1rem 0;
+    border-right: 1px solid #bbb;
+}
+.review-booking__description:last-child {
+    border: 0;
+}
+.review-booking__footer {
+    margin-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .review-booking {
+        align-items: center;
+        margin: 2rem auto;
+    }
+}

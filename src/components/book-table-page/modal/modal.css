@@ -1,0 +1,43 @@
+.modal-book {
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+.modal-book--active {
+    display: block;
+}
+.modal-book--disabled {
+    display: none;
+}
+.modal-book__content {
+    width: 40%;
+    padding: 4rem 2rem;
+    background: white;
+    position: fixed;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .modal-book__content {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .modal-book__content {
+        width: 90%;
+        padding: 1rem 0;
+    }
+}
+.modal-book__text {
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    width: 70%;
+}

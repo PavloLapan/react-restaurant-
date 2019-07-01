@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {BrowserRouter as Router, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import About from '../about';
 import '../../style/normalize.css'
 import '../../style/media.css'
@@ -9,10 +9,11 @@ import '../../style/burger-menu.css'
 import '../../style/datepicker.css'
 
 import Header from "../header";
-import Reservation from "../reservation";
+
 import Footer from "../footer";
 import Features from "../features";
 import Menu from "../menu/menu";
+
 
 import FaturesData from '../../services';
 import {ServiceProvider} from '../service-context'
@@ -21,6 +22,7 @@ import {Provider} from 'react-redux';
 
 import ErrorBoundry from "../error-boundry/error-boundry";
 import store from '../../store'
+import ReviewBooking from "../book-table-page/reviev-booking/reviev-booking";
 
 const featuresData = new FaturesData();
 
@@ -37,15 +39,12 @@ class App extends Component {
                                 <Header/>
                             </Switch>
                         </Router>
-                        <About/>
-                        <Reservation/>
-                            <ServiceProvider value={featuresData}>
-                                <Features/>
-                            </ServiceProvider>
-
+                                <About/>
+                                    <ServiceProvider value={featuresData}>
+                                        <Features/>
+                                    </ServiceProvider>
                                 <Menu/>
-
-                        <Footer/>
+                                <Footer/>
 
                     </ErrorBoundry>
                 </Provider>

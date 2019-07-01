@@ -1,0 +1,75 @@
+.table-booking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Open Sans;
+}
+.table-booking a, .table-booking a:hover, .table-booking a:visited {
+    color: #525252;
+    text-decoration: none;
+}
+.table-booking .label {
+    display: none;
+}
+.table-booking__title {
+    margin: 4rem 0;
+}
+.table-booking__subtitle {
+    font-size: 1.75rem;
+    font-family: 'Yeseva One';
+    color: #d4af37;
+    margin: 2rem 0;
+}
+.table-booking__input {
+    border: 0;
+    border-bottom: 2px solid #ccc;
+    padding: 0.5rem 0;
+    display: block;
+    margin: 1rem 0;
+    width: 250px;
+}
+.table-booking__btn {
+    display: block;
+    border: 0;
+    border-bottom: 2px solid #000;
+    padding: 0.75rem 3rem;
+    text-transform: uppercase;
+    background: #d4af37;
+    color: #000;
+    margin: 2rem 0;
+}
+.table-booking__btn:hover {
+    cursor: pointer;
+}
+.site-header__btn {
+    padding: .75rem 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: #252525;
+    border: 0;
+    border-bottom: 2px solid #d4af37;
+    font-size: 1rem;
+
+    width: 100%;
+    max-width: 260px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
