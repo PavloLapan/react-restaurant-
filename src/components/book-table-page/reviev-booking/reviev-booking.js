@@ -38,8 +38,8 @@ class ReviewBooking extends Component {
         const sendEmail = () => {
             emailjs
                 .send(
-                    'gmail',
-                    'reservation',
+                    'user_deyepDmTaCWpYyN6YqTOa',
+                    'template_a175PJEL',
                     templateParams
                 )
                 .then(
