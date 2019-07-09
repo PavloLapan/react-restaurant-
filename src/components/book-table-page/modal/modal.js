@@ -12,7 +12,7 @@ const Modal = props => {
                 <h2 className="heading">Thank you</h2>
                 <p className="modal-book__text text-center">
                     Thank you for booking reservation. Detailed information will be send
-                    to your email address.
+                    to restourant-owner email address.
                 </p>
                 <Link to="/">
                     <button className="site-header__btn">Continue</button>

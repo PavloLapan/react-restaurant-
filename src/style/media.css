@@ -17,7 +17,10 @@
   header .container-fluid-header .outer-menu {
     display: block; }
   header .container-fluid-header .content h1 {
-    font-size: 36px; }
+    font-size: 30px; }
+  header .container-fluid-header .content .arrow {
+    position: relative;
+  top: 100px}
 
   .about .media {
     flex-direction: column; }
@@ -27,6 +30,17 @@
       width: 50%; }
     .about .media .col-6 img {
       width: 100%; }
+
+    .actions .container .row p {
+        font-size: 13px;
+    }
+    .actions .container .row h2 {
+        font-size: 24px;
+    }
+
+    .coverflow__figure__3bk_C{
+        width: 150px!important;
+    }
 
   .carousel-wrapper .carousel-item {
     padding: 0; }
@@ -59,7 +73,8 @@
   .our-menu .list {
     flex-direction: column;
     justify-content: space-around;
-    margin-left: 0; }
+    margin-left: 0;
+      width: 100%;}
   .our-menu .d-flex {
     flex-direction: column; }
     .our-menu .d-flex img {
