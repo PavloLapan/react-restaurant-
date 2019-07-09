@@ -45,6 +45,10 @@ class FeaturesContainer extends React.Component {
                             '@media (min-width: 900px)': {
                                 width: '100%',
                                 height: '650px'
+                            },
+                            '@media (max-width: 480px)': {
+                                width: '100%',
+                                height: '500px'
                             }
                         }}
                     >

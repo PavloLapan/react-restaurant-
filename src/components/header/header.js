@@ -53,7 +53,6 @@ const Header = () => {
                                 <ul>
                                     <li><Link to='' onClick={scrollHome}>Home</Link></li>
                                     <li><Link to='' onClick={scrollAbout}>About</Link></li>
-                                    <li><Link to='' onClick={scrollReserve}>Reserve</Link></li>
                                     <li><Link to='' onClick={scrollFeature}>Our feature</Link></li>
                                     <li><Link to='' onClick={scrollMenu}>Menu</Link></li>
                                     <li><Link to='' onClick={scrollSubscribe}>Get subscribed </Link></li>
@@ -70,7 +69,6 @@ const Header = () => {
                     <div className="d-flex main-menu">
                         <Link to='' onClick={scrollHome}>Home</Link>
                         <Link to='' onClick={scrollAbout}>About</Link>
-                        <Link to='' onClick={scrollReserve}>Reserve</Link>
                         <Link to='' onClick={scrollFeature}>Our feature</Link>
                         <Link to='' onClick={scrollMenu}>Menu</Link>
                         <Link to='' onClick={scrollSubscribe}>Get subscribed <i className="fa fa-star"

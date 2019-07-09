@@ -8,3 +8,20 @@
     padding: 10px;
 }
 
+.h1{
+    color: deepskyblue;
+}
+
+
+
+@media all and (max-width: 480px) {
+    .p {
+        color: #fefefe;
+        width: 90%;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .h1{
+        font-size: 18px;
+    }
+}

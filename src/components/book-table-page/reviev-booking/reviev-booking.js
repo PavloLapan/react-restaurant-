@@ -18,6 +18,10 @@ class ReviewBooking extends Component {
 
 
     render() {
+        (function(){
+            emailjs.init("user_deyepDmTaCWpYyN6YqTOa");
+        })();
+
         const query = new URLSearchParams(this.props.location.search);
         const {street, number, code, city, province} = contactInfo.info.location;
         const reservation = {};
@@ -29,13 +33,13 @@ class ReviewBooking extends Component {
 
         const templateParams = {
             name: reservation.name,
-            email: reservation.email,
+            email: reservation.email
         };
 
         const sendEmail = () => {
             emailjs
                 .send(
-                    'user_deyepDmTaCWpYyN6YqTOa',
+                    'gmail',
                     'template_a175PJEL',
                     templateParams
                 )
@@ -59,7 +63,7 @@ class ReviewBooking extends Component {
                 <Link to="/">
                     <h1 className="heading review-booking__title">{contactInfo.name}</h1>
                 </Link>
-                <article className="review-booking" onLoad={sendEmail}>
+                <article className="review-booking" onClick={sendEmail}>
                     <p className="review-booking__address">
                         {street} {number}
                     </p>

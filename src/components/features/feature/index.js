@@ -6,7 +6,8 @@ const Feature = ({data}) => {
     return (
         <div className="col-4 feature-box transparent">
             <img src={src} alt="" className={styles["w-100"]}/>
-            <h1 className="yellow-line font-blue">{name}</h1>
+            <br className="yellow-line "/>
+            <h1 className={styles.h1}>{name}</h1>
             <p className={styles.p}>{desc}</p>
         </div>
     );
